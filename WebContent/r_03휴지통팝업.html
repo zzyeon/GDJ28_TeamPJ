@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sales상품_상세보기pop</title>
+<link rel="stylesheet" type="text/css" href="./css/common/main.css" />
+<link rel="stylesheet" type="text/css" href="./css/common/board.css" />
+<link rel="stylesheet" type="text/css" href="./css/common/detail.css" />
+<link rel="stylesheet" type="text/css" href="./css/common/popup.css" />
+<style type="text/css">
+/* 상품상세보기화면 */
+/* 개별 css는 여기에 */
+#write{
+    background-image: url("write.png");
+}
+#trash{
+    background-image: url("trash.png");
+}
+#write, #trash{
+	float: right;
+	border: 0px solid rgb(190, 190, 190);
+    width: 35px;
+    height: 35px;  
+	background-color: #FFF;
+	margin: 10px 10px 5px 10px;
+	cursor: pointer;
+}
+
+.t{
+	width: 1200px;
+	height: 300px;
+	border: 1px solid rgb(199,199,199);
+	font-size: 11pt;
+}
+#title{
+	margin: 40px 30px 5px 50px;
+	font-size: 15pt;
+	font-weight:bold;
+}
+#line{
+	margin: 0 50px;
+	font-size: 9pt;
+	color: rgb(211, 84, 0);
+}
+#list{
+margin: 50px ;
+}
+.b{
+	margin-top: 30px;
+	width: 1200px;
+	height: 1500px;
+	border: 1px solid rgb(199,199,199);
+	font-size: 11pt;
+}
+.w{
+	background-image: url('cat.png');
+}
+#t_list{
+margin: 40px 30px;
+line-height:200%;
+}
+#b_list{
+width: 1000px;
+margin-top:40px;
+margin-left: 40px;
+line-height:200%;
+font-size: 13pt;
+font-weight: bold;
+}
+#b_list span{
+font-size: 11pt;
+font-weight: 100;
+margin-left: 10px;
+color: rgb(19,19,19);
+}
+#b_list span #col{
+color: rgb(211, 84, 0);
+font-weight: bold;
+}
+
+.pop, .bg {
+	display: inline-block;
+	position: absolute;
+}
+
+.bg {
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	top: 0px;
+	left: 0px;
+	opacity: 0.7;
+	z-index: 50;
+} 
+.popup {
+	width: 300px;
+	height: 200px;
+	top: calc(50% - 100px);
+	left: calc(50% - 150px);
+}
+
+</style>
+</head>
+<body>
+<!-- popup -->
+	<div class="bg"></div>
+	<div class="popup">
+		<div class="popup_title">
+			<div class="popup_title_txt">
+			상품 상세보기 알림</div>
+		</div>
+		<div class="popup_contents">
+		<!-- 팝업내용들어감  -->상품을 삭제하시겠습니까? 
+		</div>
+		<div class="popup_btn">
+			<input type="button" value="확인" />
+		
+			<input type="button" value="취소" />
+		</div>
+	</div>
+	
+<!-- Top Bar -->
+<div class="top_area">
+	<div class="logo"></div>
+	<div class="top_menu_area">
+		<div class="top_menu">
+			<div class="top_menu_txt">Groupware</div>
+		</div>
+		<div class="top_menu">
+			<div class="top_menu_txt">HR</div>
+		</div>
+		<div class="top_menu">
+			<div class="top_menu_txt">Sales</div>
+		</div>
+		<div class="top_menu">
+			<div class="top_menu_txt">CRM</div>
+		</div>
+		<div class="top_menu">
+			<div class="top_menu_txt">EIS</div>
+		</div>
+	</div>
+	<div class="info_area">
+		<div class="info_wrap">
+			<div class="photo">
+				<img alt="사진" src="./images/sample/photo.jpg">
+			</div>
+			<div class="info_txt">신사동 영업2팀<br/>사원 홍길동</div>
+			<div class="top_option_btn"></div>
+			<div class="top_noti_btn"><div class="noti_cnt_on">3</div></div>
+			<div class="logout_btn"><div class="logout_btn_txt">로그아웃</div></div>
+		</div>
+	</div>
+</div>
+
+<!-- Left Menu -->
+<div class="left_area">
+
+<div class="menu1_title">
+	<div class="menu1_txt">Sales</div>
+</div>
+
+<div class="menu2_wrap">
+	<div class="menu2_title">
+		<div class="menu2_txt">영업관리</div>
+	</div>
+</div>
+<div class="menu2_wrap">
+	<div class="menu2_title">
+		<div class="menu2_txt">기업관리</div>
+	</div>
+</div>
+<div class="menu2_wrap_on">
+	<div class="menu2_title">
+		<div class="menu2_txt">상품관리</div>
+	</div>
+	<div class="menu3_wrap">
+		<div class="menu3_title_on">
+			<div class="menu3_txt">상품조회</div>
+		</div>
+		<div class="menu3_title">
+			<div class="menu3_txt">상품등록</div>
+		</div>
+		<div class="menu3_title">
+			<div class="menu3_txt">상품현황</div>
+		</div>
+	</div>
+</div>
+</div>
+<!-- Contents -->
+<div class="contents_area">
+	<div class="gnb"><div class="gnb_txt">Home > Sales > 상품관리 > 상품조회 > 상품상세보기</div></div>
+	<div class="contents_header"><div class="contents_header_txt">상품상세보기</div></div>
+	<div class="contents"><!-- 여기에 내용을 작성하시오. -->
+	<div id="wrap">
+		<div class="t">
+		<div class="w"></div>
+		<div class="del">
+		<input type="button" id="trash">
+		<input type="button" id="write">
+		</div>
+		<p id="title">우리 중진공 투게더론</p>
+		<p id="line">중소벤처기업진흥공단과의 업무협약을 통한 중소기업 금융지원</p>
+		<ul id="t_list">
+			<li>대출종류 : 기업시설자금대출, 기업운전자금 대출 </li>
+			<li>대출기간 : 운전자금 5년이내, 시설자금 10년이내</li>
+			<li>대출한도 : 제한없음</li>
+		</ul>
+		
+		</div>
+		<div class="b">
+		<ul id="b_list">
+			<li>상품명<br/> <span>우리 중진공 투게더론</span>	</li>
+			<li>대출종류 <br/> <span>기업시설자금대출,기업운전자금대출</span> </li>			
+			<li>개요  <br/> <span>중소벤처기업진흥공단과의 업무협약을 통한 중소기업 금융지원</span></li>			
+			<li>특징  <br/> <span>중소벤처기업진흥공단 간접대출 지원대상 중 「협업대출」 추천을 받은 우량기업을 대상으로 한 상품</span></li>			
+			<li>대출대상  <br/> <span>우리은행이 정한 신용등급 BB+(소호 5)등급 이상 중견 및 중소기업(개인사업자 포함)
+				※ 우리은행에서 정한 관리산업 및 상호출자제한 기업집단군 해당기업은 제외</span></li>			
+			<li>대출한도금액   <br/> <span>제한없음</span></li>			
+			<li>대출기간  <br/> <span>운전자금(분할상환): 5년 이내(거치기간 2년 이내)
+시설자금(분할상환) 10년 이내(거치기간 5년 이내)</span></li>			
+			<li>기본금리 <br/> <span> <span id="col">대출금리 : 기준금리 + 가산금리</span> 기준금리 : 3개월 KORIBOR 연동금리, 3개월 CD 연동금리, 
+			기간별 변동금리, 기간별 고정금리 중 선택 가능 ※ 가산금리는 고객의 신용등급, 상환능력, 대출금액, 대출기간, 거래실적, 자금용도 등을 반영하여 시스템에 의해 결정됩니다.</span></li>			
+			<li>상환방법 <br/> <span>원금균등분할상환대출</span> </li>			
+			<li>담보관련서류 <br/> <span>사업자등록증, 전년도 소득금액증명원, 신분증, 중소벤처기업진흥공단에서 발급한  「협업대출 추천서」</span> </li>		
+			<li>유의사항 <br/> <span>대출 잔액에 대하여 연체이자를 납부하셔야 합니다.
+연체기간에 따라 「신용정보의 이용 및 보호에 관한 법률」,「신용정보관리규약」에 근거, 신용도판단정보* 등록자로 등재되어 금융거래 시 불이익을 받을 수 있습니다. (*연체정보, 대위변제·대지급정보, 부도정보, 금융질서문란정보 등)
+보유 중인 예금과의 상계, 담보목적물 처분, 발견재산에 대한 보전조치 등 법적 절차가 진행될 수 있습니다.만기도래 시 거래실적, 신용등급 변동 등에 따라 대출금리가 인상되거나, 대출금의 일부 또는 전액을 상환하셔야 할 수도 있습니다.</span> </li>
+			<li>비고  <br/> <span>상기 내용은 당행의 여신정책 변경에 따라 달라질 수 있습니다.
+금리인하요구권 : 본 상품은 금리인하요구권 신청이 가능합니다. 단, 은행의 심사결과에 따라 금리인하 요청이 반영되지 않을 수도 있습니다.
+대출계약철회권 : 본 상품은 대출계약 철회 신청 대상이 아닙니다.
+대출한도, 대출금리 등 자세한 거래조건은 대출신청 영업점 담당자에게 문의하시기 바랍니다.(※ 위 내용은 대출에 대한 이해를 돕고 약관의 중요내용을 알려드리기 위한 참고자료입니다.)</span> </li>
+						
+		</ul>
+		</div>
+		
+	</div>
+	</div>
+
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

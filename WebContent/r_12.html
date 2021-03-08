@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sales상품_상품별거래업체조회</title>
+<link rel="stylesheet" type="text/css" href="./css/common/main.css" />
+<link rel="stylesheet" type="text/css" href="./css/common/board.css" />
+<style type="text/css">
+/* 상품별 거래현황*/
+/* 개별 css는 여기에 */
+#top_w {
+	width: 800px;
+}
+.option{
+	background-color: rgb(145,183,217);
+    width: 750px;
+    height: 120px;
+    padding: 30px 0px 0px 29px;
+    font-size: 11pt;
+    margin-bottom: 20px;
+}
+#item_option{
+	width: 260px;
+	height: 40px;
+	background-color: #e4eaf2;
+	border: 0px solid rgb(199, 199, 199);
+}
+#item_option:hover {
+	background-color: rgb(145, 183, 217);
+	cursor: pointer;
+}
+
+#sb {
+	width: 200px;
+	height: 30px;
+	border: 1px solid rgb(199, 199, 199);
+	margin: 20px 0;
+	cursor: pointer;
+}
+#item_name {
+	vertical-align: top;
+	height: 30px;
+	width: 400px;
+	border: 1px solid rgb(199, 199, 199);
+}
+
+#item_name_btn {
+	vertical-align: top;
+	background-color: rgb(2, 40, 89); /* 1번 컬러 */
+	/* border: 1px solid rgb(199,199,199); */
+	width: 100px;
+	height: 34px;
+	padding: 1px 2px;
+	text-align: center;
+	line-height: 30px;
+	margin-left: -10px;
+	font-size: 11pt;
+	color: #fff;
+	cursor: pointer;
+}
+.top_t{
+	padding-left: 120px;
+}
+#s_o{
+	vertical-align: top;
+	width: 200px;
+	border: 1px solid rgb(199,199,199);
+	line-height: 30px;
+	font-size: 11pt;
+    margin: 10px -10px 20px 0px;
+}
+
+#test {
+	vertical-align: top;
+	margin-right: -10px;
+	background-color: white;
+	display: inline-block;
+	border: 1px solid rgb(199, 199, 199);
+	width: 100px;
+	height: 30px;
+	padding: 1px 2px;
+	text-align: center;
+	line-height: 30px;
+}
+
+#cal{
+    margin: 10px 5px 20px 0px;
+}
+
+#text {
+    width: 10px;
+    display: inline-block;
+    height: 30px;
+	font-size: 11pt;
+    margin: 15px 0 0 30px;
+}
+</style>
+</head>
+<body>
+<!-- Top Bar -->
+<div class="top_area">
+	<div class="logo"></div>
+	
+	<div class="top_menu_area">
+		<div class="top_menu">
+			<div class="top_menu_txt">Groupware</div>
+		</div>
+		<div class="top_menu">
+			<div class="top_menu_txt">HR</div>
+		</div>
+		<div class="top_menu">
+			<div class="top_menu_txt">Sales</div>
+		</div>
+		<div class="top_menu">
+			<div class="top_menu_txt">CRM</div>
+		</div>
+		<div class="top_menu">
+			<div class="top_menu_txt">EIS</div>
+		</div>
+	</div>
+	<div class="info_area">
+		<div class="info_wrap">
+			<div class="photo">
+				<img alt="사진" src="./images/sample/photo.jpg">
+			</div>
+			<div class="info_txt">신사동 영업2팀<br/>사원 홍길동</div>
+			<div class="top_option_btn"></div>
+			<div class="top_noti_btn"><div class="noti_cnt_on">3</div></div>
+			<div class="logout_btn"><div class="logout_btn_txt">로그아웃</div></div>
+		</div>
+	</div>
+</div>
+
+<!-- Left Menu -->
+<div class="left_area">
+
+<div class="menu1_title">
+	<div class="menu1_txt">Sales</div>
+</div>
+
+<div class="menu2_wrap">
+	<div class="menu2_title">
+		<div class="menu2_txt">영업관리</div>
+	</div>
+</div>
+<div class="menu2_wrap">
+	<div class="menu2_title">
+		<div class="menu2_txt">기업관리</div>
+	</div>
+</div>
+<div class="menu2_wrap_on">
+	<div class="menu2_title">
+		<div class="menu2_txt">상품관리</div>
+	</div>
+	<div class="menu3_wrap">
+		<div class="menu3_title">
+			<div class="menu3_txt">상품조회</div>
+		</div>
+		<div class="menu3_title">
+			<div class="menu3_txt">상품등록</div>
+		</div>
+		<div class="menu3_title_on">
+			<div class="menu3_txt">상품현황</div>
+		</div>
+	</div>
+</div>
+</div>
+<!-- Contents -->
+<div class="contents_area">
+	<div class="gnb"><div class="gnb_txt">Home > Sales > 상품관리 > 상품현황 > 상품별 거래업체</div></div>
+	<div class="contents_header">
+	<div class="contents_header_txt">상품현황</div></div>
+<div class="contents">
+			<!-- 여기에 내용을 작성하시오. -->
+			<div id="top_w"><!-- 선택할 경우 색상 바뀐 상태로 item_option적용  -->
+			<input type="button" id="item_option" value="기업운전자금대출">
+			<input type="button" id="item_option" value="기업시설자금대출">
+			<input type="button" id="item_option" value="기업정책자금대출">
+			</div>
+			<div class="option">
+				<div id="test">상품명</div>
+				<input type="text" id="item_name"> <input type="button" id="item_name_btn" value="검색"><br />
+
+
+				<!-- 검색옵션 select 박스 -->
+				<select id="sb">
+					<option value="0" selected="selected">대출종류</option>
+					<option value="1">기업운용자금대출</option>
+					<br />
+					<option value="2">기업시설자금대출</option>
+					<br />
+					<option value="3">기업정책자금대출</option>
+					<br />
+				</select>
+				<select id="sb">
+					<option value="0" selected="selected">금리유형</option>
+					<option value="1">고정금리</option>
+					<br/>
+					<option value="2">변동금리</option>
+					<br />
+					<option value="3">혼합금리</option>
+					<br />
+				</select>  
+				<select id="sb">
+					<option value="0" selected="selected">상환방법</option>
+					<option value="1">만기일시상환</option>
+					<br />
+					<option value="2">원리금균등분할상환</option>
+					<br />
+					<option value="3">원금균등분할상환</option>
+					<br />
+				</select><br />
+				<!-- 기간 검색옵션 -->
+				
+			</div>
+	<!-- 상품조회목록 테이블  -->
+	<div class="default_search_area top_t">
+			</div>
+			<div class="default_board t">
+				<table>
+					<colgroup>
+						<col width="160px">
+						<col width="400px">
+						<col width="160px">
+						<col width="160px">
+						<col width="160px">
+					</colgroup>
+					<thead>
+						<tr class="top">
+							<th>상품명</th>
+							<th>거래업체</th>
+							<th>거래금액(만원)</th>
+							<th>거래일자</th>
+							<th>상환일자</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td rowspan="6">아름다운 우리나래 대출</td>
+							<td>상환TJ</td>
+							<td>2,000,000</td>
+							<td>2020/10/08</td>
+							<td>2022/10/07</td>
+						</tr>
+						<tr>
+							<td>가나상사</td>
+							<td>2,000,000</td>
+							<td>2020/1/11</td>
+							<td>2023/1/10</td>
+						</tr>
+						<tr>
+							<td>그래미크래미</td>
+							<td>2,000,000</td>
+							<td>2018/4/08</td>
+							<td>2021/4/07</td>
+						</tr>
+						<tr>
+							<td>KAKAO</td>
+							<td>2,000,000</td>
+							<td>2019/10/08</td>
+							<td>2021/10/07</td>
+						</tr>
+						<tr>
+							<td>삼익화학</td>
+							<td>700,000</td>
+							<td>2019/10/08</td>
+							<td>2022/10/07</td>
+						</tr>
+						<tr>
+							<td>RND화학</td>
+							<td>800,000</td>
+							<td>2018/12/08</td>
+							<td>2021/12/07</td>
+						</tr>
+						
+						
+					</tbody>
+				</table>
+				<div class="page_wrap">
+					<div class="page_nation">
+						<div class="arrow prev"></div>
+						<div class="page_on">1</div>
+						<div class="page">2</div>
+						<div class="page">3</div>
+						<div class="page">4</div>
+						<div class="arrow next"></div>
+					</div>
+				</div>
+			</div>
+	
+</div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

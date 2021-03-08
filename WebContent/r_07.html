@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Sales상품_등록pop_저장</title>
+<link rel="stylesheet" type="text/css" href="./css/common/main.css" />
+<link rel="stylesheet" type="text/css" href="./css/common/board.css" />
+<link rel="stylesheet" type="text/css" href="./css/common/detail.css" />
+<link rel="stylesheet" type="text/css" href="./css/common/popup.css" />
+<style type="text/css">
+/* 팝업 크기변경 시 */
+.popup {
+	width: 300px;
+	height: 200px;
+	top: calc(50% - 100px);
+	left: calc(50% - 150px);
+}
+.pop, .bg {
+	display: inline-block;
+	position: absolute;
+}
+
+.bg {
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	top: 0px;
+	left: 0px;
+	opacity: 0.7;
+	z-index: 50;
+} 
+
+/* 상세보기영역 가로변경 시 */
+.underbox {
+	width: 800px;
+}
+
+/* 버튼영역 가로변경 시 */
+.detail_btn_area {
+	width: 800px;
+}
+/* 개별 css는 여기에 */
+#t_txt2{	
+	margin-left: 10px;
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 4px;
+    width: 400px;
+}
+#t_txt1{	
+	margin-left: 10px;
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 4px;
+    width: 400px;
+} 
+
+</style>
+</head>
+<body>
+	<!-- popup -->
+		<div class="bg"></div>
+	<div class="popup">
+		<div class="popup_title">
+			<div class="popup_title_txt">
+			 알림</div>
+		</div>
+		<div class="popup_contents">
+		<!-- 팝업내용들어감  -->
+			<p> 정상적으로 저장되었습니다. </p>
+			
+		</div>
+		<div class="popup_btn">
+			<input type="button" value="확인" />
+		</div>
+	</div>
+
+	<!-- Top Bar -->
+	<div class="top_area">
+		<div class="logo"></div>
+		<div class="top_menu_area">
+			<div class="top_menu">
+				<div class="top_menu_txt">Groupware</div>
+			</div>
+			<div class="top_menu">
+				<div class="top_menu_txt">HR</div>
+			</div>
+			<div class="top_menu">
+				<div class="top_menu_txt">Sales</div>
+			</div>
+			<div class="top_menu">
+				<div class="top_menu_txt">CRM</div>
+			</div>
+			<div class="top_menu">
+				<div class="top_menu_txt">EIS</div>
+			</div>
+		</div>
+		<div class="info_area">
+			<div class="info_wrap">
+				<div class="photo">
+					<img alt="사진" src="./images/sample/photo.jpg">
+				</div>
+				<div class="info_txt">
+					신사동 영업2팀<br />사원 홍길동
+				</div>
+				<div class="top_option_btn"></div>
+				<div class="top_noti_btn">
+					<div class="noti_cnt_on">3</div>
+				</div>
+				<div class="logout_btn">
+					<div class="logout_btn_txt">로그아웃</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Left Menu -->
+	<div class="left_area">
+
+		<div class="menu1_title">
+			<div class="menu1_txt">Sales</div>
+		</div>
+
+		<div class="menu2_wrap">
+			<div class="menu2_title">
+				<div class="menu2_txt">영업관리</div>
+			</div>
+		</div>
+		<div class="menu2_wrap">
+			<div class="menu2_title">
+				<div class="menu2_txt">기업관리</div>
+			</div>
+		</div>
+		<div class="menu2_wrap_on">
+			<div class="menu2_title">
+				<div class="menu2_txt">상품관리</div>
+			</div>
+			<div class="menu3_wrap">
+				<div class="menu3_title">
+					<div class="menu3_txt">상품조회</div>
+				</div>
+				<div class="menu3_title_on">
+					<div class="menu3_txt">상품등록</div>
+				</div>
+				<div class="menu3_title">
+					<div class="menu3_txt">상품현황</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Contents -->
+	<div class="contents_area">
+		<div class="gnb">
+			<div class="gnb_txt">Home > Sales > 상품관리 > 상품등록 </div>
+		</div>
+		<div class="contents_header">
+			<div class="contents_header_txt">상품등록</div>
+		</div>
+		<div class="contents">
+			<!-- 여기에 내용을 작성하시오. -->
+			<div class="underbox">
+				<div class="underline">
+					<div class="line1">상품명 *</div>
+					<div class="con1">
+					<input type="text" placeholder="내용을 입력해주세요 " id="t_txt1">
+		
+					</div>
+				
+				</div>
+				<div class="underline">
+					<div class="line1">대출종류 *</div>
+					<div class="con3">
+						<input type="text" placeholder="내용을 입력해주세요 " id="t_txt2">
+				<input type="button" value="검색" id="btn">
+					</div>
+					
+				</div>
+				<div class="underline">
+					<div class="line1">개요 *</div>
+					<div class="con3">
+					<input type="text" placeholder="내용을 입력해주세요 " id="t_txt2">
+					</div>
+				</div>
+				<div class="underline">
+					<div class="line1">특징</div>
+					<div class="con1">
+						<input type="text" placeholder="내용을 입력해주세요 " id="t_txt2">
+					</div>
+				</div>
+				<div class="underline">
+					<div class="line1">대출대상*</div>
+					<div class="con3">
+						<input type="text" placeholder="내용을 입력해주세요 " id="t_txt1">
+				<input type="button" value="검색" id="btn">
+					</div>
+				</div>
+				<div class="underline">
+					<div class="line1">대출한도금액*</div>
+					<div class="con3">
+					<input type="text" placeholder="내용을 입력해주세요 " id="t_txt1">
+					</div>
+				</div>
+				<div class="underline">
+					<div class="line1">대출기간*</div>
+					<div class="con3">
+					<input type="text" placeholder="내용을 입력해주세요 " id="t_txt2">
+					<input type="button" value="검색" id="btn">
+					</div>
+				</div>
+				<div class="underline">
+					<div class="line1">기본금리*</div>
+					<div class="con3"><input type="text" placeholder="내용을 입력해주세요 " id="t_txt1"></div>
+				</div>
+				<div class="underline">
+					<div class="line1">상환방법*</div>
+					<div class="con3"><input type="text" placeholder="내용을 입력해주세요 " id="t_txt2">
+				<input type="button" value="검색" id="btn"></div>
+				</div>
+				<div class="underline">
+					<div class="line1">담보</div>
+					<div class="con3"><input type="text" placeholder="내용을 입력해주세요 " id="t_txt2">
+				<input type="button" value="검색" id="btn"></div>
+				</div>
+				<div class="underline">
+					<div class="line1">관련서류</div>
+					<div class="con3"><input type="text" placeholder="내용을 입력해주세요 " id="t_txt2">
+				<input type="button" value="검색" id="btn"></div>
+				</div>
+					<div class="underline">
+					<div class="line1">유의사항</div>
+					<div class="con3"><input type="text" placeholder="내용을 입력해주세요 " id="t_txt1"></div>
+				</div>	<div class="underline">
+					<div class="line1">비고</div>
+					<div class="con3"><input type="text" placeholder="내용을 입력해주세요 " id="t_txt1"></div>
+				</div>
+			</div>
+			<div class="detail_btn_area">
+				<input type="button" value="저장" />
+				<input type="button" value="취소" />
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
